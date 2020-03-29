@@ -34,12 +34,32 @@ def int_to_ascii(val):
     return str(chr(val))
 
 
+# --------------------------------------------------------------
+
+# Operacje bitowe - baza kryptografii
+# ------------------------------------------------------------
+
+def bit_negate(bit):
+    return '1' if bit == '0' else '1'
+
+
+def bit_and(byte_bit, key_bit):
+    return '1' if byte_bit == '1' and key_bit == '1' else '0'
+
+
+def bit_or(byte_bit, key_bit):
+    return '1' if byte_bit == '1' or key_bit == '1' else '0'
+
+
+def bit_xor(byte_bit, key_bit):
+    return '1' if (byte_bit == '1' and key_bit == '0') or (byte_bit == '0' and key_bit == '1') else '0'
+
+
+# ------------------------------------------------------------
+
 def create_message(message):
     print('\nMessage was created.')
     return message
-
-
-# --------------------------------------------------------------
 
 
 # Osoba druga - odbiorca wiadomości
